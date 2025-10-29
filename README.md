@@ -65,7 +65,7 @@ pre-entrega-final/
    ```
 
 5. **Verificar WebDriver:**
-   Asegúrate de tener el driver compatible con tu navegador (por ejemplo, ChromeDriver) y que esté en el PATH o en la raíz del proyecto.
+   Asegurarse de tener el driver compatible con el navegador (por ejemplo, ChromeDriver) y que esté en el PATH o en la raíz del proyecto.
 
 ---
 
