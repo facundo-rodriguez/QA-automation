@@ -15,14 +15,14 @@ def test_login_validation(login_in_driver,usuario,password,debe_funcionar):
     
     LoginPage(driver).login_completo(usuario,password)
 
-    if debe_funcionar == True:
+    if debe_funcionar: #si es True
         logger.info("verficando redireccionamiento dentro de la pagina")
         try: 
-            assert "/inventory.html" in driver.current_url, "No se redirgio al inventario"
+            assert "/inventory.html" in driver.current_url, "No se redirgio a inventory.html"
             logger.info("test de login completado")
         except AssertionError as e:
             logger.info(f"Assert Fallido: {e}")
     elif debe_funcionar == False:
         mensaje_error = LoginPage(driver).obtener_error()
-        assert "Epic sadface" in mensaje_error, "el mensaje de error no se esta mostrando"
+        assert "Epic sadface" in mensaje_error, "el mensaje de error no se muestra"
         logger.info("Test de login fallido completado con exito")
